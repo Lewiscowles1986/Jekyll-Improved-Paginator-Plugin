@@ -8,7 +8,7 @@ Usage:
     list_limit: 2
  3. Save the file and restart Jekyll.
 
-N.b.: If you specify a `list_for` that does not exist, or is invalid, this will error. As the intended use-case for this is to be staged to a site this is fine for production, however do not put this inside a Jekyll generator online, as if you screw up the front-matter your site may experience downtime.
+ > N.b.: If you specify a `list_for` that does not exist, or is invalid, this will error. As the intended use-case for this is to be staged to a site this is fine for production, however do not put this inside a Jekyll generator online, as if you screw up the front-matter your site may experience downtime.
 
 Todo:
 Work on alternative sorting option per-page

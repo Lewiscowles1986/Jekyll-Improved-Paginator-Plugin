@@ -56,5 +56,10 @@ Jekyll's built-in paginator sucks! You are forced to use index.html to paginate 
  * Work on alternative sorting option per-page
  * Work on supporting listing anything Jekyll can access (files, collections, pages, posts)
  * Work on filtering what Jekyll is looking for
+ * Work on liquid for last and first page numbers
+ * Work on nicer liquid for framed 5 page numbers only relative to current number + or - 2
+   `[1,2,3,4,5]` page 1, 2 & 3
+   `[2,3,4,5,6]` page 4
+   `[95,96,97,98,99]` page 99
  * Work on extending to work with data files to generate listings
  

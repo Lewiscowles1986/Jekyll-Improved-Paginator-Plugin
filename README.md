@@ -11,8 +11,9 @@ Usage:
  > N.b.: If you specify a `list_for` that does not exist, or is invalid, this will error. As the intended use-case for this is to be staged to a site this is fine for production, however do not put this inside a Jekyll generator online, as if you screw up the front-matter your site may experience downtime.
 
 Todo:
-Work on alternative sorting option per-page
-Work on supporting listing anything Jekyll can access (files, collections, pages, posts)
-Work on filtering what Jekyll is looking for
-Work on extending to work with data files to generate listings
+======
+ * Work on alternative sorting option per-page
+ * Work on supporting listing anything Jekyll can access (files, collections, pages, posts)
+ * Work on filtering what Jekyll is looking for
+ * Work on extending to work with data files to generate listings
  

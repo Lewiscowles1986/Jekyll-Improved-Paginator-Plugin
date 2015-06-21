@@ -1,6 +1,6 @@
 module Jekyll
   module ListingPages
-    VERSION = "0.1.3"
+    VERSION = "0.1.7"
     class ListingPages < Generator
       # This generator is safe from arbitrary code execution.
       safe true
@@ -20,11 +20,14 @@ module Jekyll
             if page.data['list_for'] and page.data['list_limit']
               all = []
               if page.data['list_for'] == 'posts'
-                all = site.site_payload['site'][ page.data['list_for'] ].reject { |entry| entry['hidden'] }
+                all = page.site.posts.reject { |entry| entry['hidden'] }.sort_by { |el|
+                  date = el.data['date']
+                  date.to_s + el.data['title']
+                }.reverse
               else
                 all = page.site.collections[ page.data['list_for'] ].docs.sort_by { |el|
                   pub_date = el.data['pub_date'] == nil ? Time.new( 1900,01,01, 00,00,00) : el.data['pub_date']
-                  el.data['title'] + pub_date.to_s
+                  pub_date.to_s + el.data['title']
                 }.reverse
               end
               pages = get_pages(all, page.data['list_limit'].to_i)
